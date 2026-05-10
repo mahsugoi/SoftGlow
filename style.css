@@ -8,6 +8,7 @@
   --ink2:rgba(26,18,8,.5);
   --green:#25D366;
   --white:#FFFDF8;
+  --logo-brown:#946F53;
 }
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
@@ -28,7 +29,7 @@ header{
 header.up{background:rgba(250,245,236,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(26,18,8,.08)}
 .logo{display:flex;align-items:center;gap:14px}
 .logo img{width:48px;height:48px;flex-shrink:0}
-.brand-name{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:700;letter-spacing:.04em;color:var(--ink)}
+.brand-name{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:700;letter-spacing:.04em;color:var(--logo-brown)}
 .brand-divider{font-size:1.3rem;color:var(--bark);font-weight:300}
 .brand-product{font-family:'Great Vibes',cursive;font-size:clamp(1.3rem,3vw,1.8rem);color:var(--caramel)}
 nav{display:flex;align-items:center;gap:1.8rem}
