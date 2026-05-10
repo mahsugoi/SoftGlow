@@ -45,8 +45,8 @@ nav a:hover{color:var(--ink)}
 .mob a{font-family:'Cormorant Garamond',serif;font-size:2rem}
 .mob-x{position:absolute;top:1.2rem;right:1.8rem;font-size:1.4rem;background:none;border:none;cursor:pointer}
 
-#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr}
-.hero-l{display:flex;flex-direction:column;justify-content:center;padding:8rem 3rem 4rem 2.5rem}
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative}
+.hero-l{display:flex;flex-direction:column;justify-content:center;padding:8rem 3rem 4rem 2.5rem;position:relative;z-index:1}
 .eyebrow{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--caramel);margin-bottom:1.5rem;display:flex;align-items:center;gap:.7rem}
 .eyebrow::before{content:'';width:22px;height:1px;background:var(--caramel)}
 h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,6.5vw,6rem);font-weight:300;line-height:1.05;letter-spacing:-.02em;margin-bottom:1.5rem}
@@ -61,20 +61,22 @@ h1 strong{font-weight:700;display:block}
 .btn-wa svg{width:15px;height:15px;flex-shrink:0}
 
 .hero-r{
-  background:var(--sand);
-  display:flex;align-items:center;justify-content:center;
-  position:relative;overflow:hidden;padding:5rem 2rem;
+  background:url('background.png') center/cover no-repeat;
+  position:relative;overflow:hidden;z-index:1;
 }
-.hero-r::before{
-  content:'';position:absolute;
-  width:400px;height:400px;border-radius:50%;
-  background:radial-gradient(circle,rgba(201,135,31,.15),transparent 70%);
-  top:50%;left:50%;transform:translate(-50%,-50%);
-}
-.hero-img{width:clamp(220px,28vw,360px);filter:drop-shadow(0 24px 48px rgba(26,18,8,.18));animation:float 5s ease-in-out infinite;position:relative;z-index:1}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
 .rating-chip{position:absolute;top:2rem;left:2rem;background:var(--ink);color:var(--white);padding:.6rem 1rem;border-radius:8px;font-size:.75rem;z-index:2}
 .rating-chip strong{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--caramel);display:block}
+
+#hero::before{
+  content:'';position:absolute;left:0;top:0;
+  width:35%;height:100%;
+  background:radial-gradient(
+    ellipse 140% 100% at 0% 50%,
+    rgba(248,242,234,0.7) 0%,
+    transparent 65%
+  );
+  z-index:0;pointer-events:none;
+}
 
 .marquee{background:var(--ink);overflow:hidden;padding:.7rem 0}
 .mtrack{display:flex;gap:2.5rem;white-space:nowrap;animation:scroll 20s linear infinite}
