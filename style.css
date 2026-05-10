@@ -47,7 +47,7 @@ nav a:hover{color:var(--white);background:var(--bark)}
 .mob-x{position:absolute;top:1.2rem;right:1.8rem;font-size:1.4rem;background:none;border:none;cursor:pointer}
 
 #hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative}
-.hero-l{display:flex;flex-direction:column;justify-content:center;padding:8rem 3rem 4rem 2.5rem;position:relative;z-index:1}
+.hero-l{display:flex;flex-direction:column;justify-content:center;padding:8rem 3rem 4rem 2.5rem;position:relative;z-index:1;background:var(--white);border-radius:0 200px 200px 0;overflow:hidden}
 .eyebrow{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--caramel);margin-bottom:1.5rem;display:flex;align-items:center;gap:.7rem}
 .eyebrow::before{content:'';width:22px;height:1px;background:var(--caramel)}
 h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,6.5vw,6rem);font-weight:300;line-height:1.05;letter-spacing:-.02em;margin-bottom:1.5rem}
@@ -67,17 +67,6 @@ h1 strong{font-weight:700;display:block}
 }
 .rating-chip{position:absolute;top:2rem;left:2rem;background:var(--ink);color:var(--white);padding:.6rem 1rem;border-radius:8px;font-size:.75rem;z-index:2}
 .rating-chip strong{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--caramel);display:block}
-
-#hero::before{
-  content:'';position:absolute;left:0;top:0;
-  width:35%;height:100%;
-  background:radial-gradient(
-    ellipse 140% 100% at 0% 50%,
-    rgba(248,242,234,0.7) 0%,
-    transparent 65%
-  );
-  z-index:0;pointer-events:none;
-}
 
 .marquee{background:var(--ink);overflow:hidden;padding:.7rem 0}
 .mtrack{display:flex;gap:2.5rem;white-space:nowrap;animation:scroll 20s linear infinite}
@@ -135,15 +124,6 @@ h2 em{font-style:italic;color:var(--bark)}
 .btn-wa-big svg{width:18px;height:18px;flex-shrink:0}
 .order-note{font-size:.75rem;color:rgba(250,245,236,.3);margin-top:1rem}
 
-#faq{padding:5rem 0;background:var(--sand)}
-.faq-wrap{max-width:680px;margin:2.5rem auto 0}
-.faq-item{border-bottom:1px solid rgba(26,18,8,.1)}
-.faq-item:first-child{border-top:1px solid rgba(26,18,8,.1)}
-.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.87rem;color:var(--ink);text-align:left;gap:1rem}
-.faq-ico{color:var(--caramel);font-size:1.1rem;transition:transform .3s;flex-shrink:0}
-.faq-item.open .faq-ico{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;font-size:.84rem;color:var(--ink2);line-height:1.75;font-weight:300;transition:max-height .35s,padding .35s}
-.faq-item.open .faq-a{max-height:150px;padding-bottom:1.1rem}
 
 footer{background:var(--ink);padding:3rem 2rem 2rem;text-align:center}
 .f-logo{display:block;margin:0 auto .6rem;width:48px;height:48px}
@@ -175,7 +155,6 @@ footer{background:var(--ink);padding:3rem 2rem 2rem;text-align:center}
   .step+.step::before{display:none}
   .wrap{padding:0 1.5rem}
   .order-inner{padding:0 1.5rem}
-  .faq-wrap{padding:0 1.5rem}
 }
 @media(max-width:500px){
   .features{grid-template-columns:1fr}
