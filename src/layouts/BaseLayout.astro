@@ -1,0 +1,70 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'GlowHolder — Warm Light for Quiet Moments', description = 'Lampu LED kayu handcrafted dengan cahaya hangat 2700K. Dibuat dengan tangan dari kayu mahoni solid. Order via WhatsApp.' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content="lampu kayu, LED lamp, handcrafted lamp, decorative lamp, Indonesian craftsmanship, wood lamp, warm light" />
+  <meta name="author" content="GlowHolder" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="product" />
+  <meta property="og:title" content="GlowHolder Wooden LED Lamp — Warm Light for Quiet Moments" />
+  <meta property="og:description" content="Lampu LED kayu handcrafted dengan cahaya hangat 2700K. Dibuat dengan tangan dari kayu mahoni solid." />
+  <meta property="og:image" content="https://mahsugoi.github.io/SoftGlow/product-ambient.webp" />
+  <meta property="og:url" content="https://mahsugoi.github.io/SoftGlow/" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:site_name" content="GlowHolder" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GlowHolder — Warm Light for Quiet Moments" />
+  <meta name="twitter:description" content="Lampu LED kayu handcrafted. Cahaya hangat untuk momen tenang." />
+  <meta name="twitter:image" content="https://mahsugoi.github.io/SoftGlow/product-ambient.webp" />
+
+  <link rel="canonical" href="https://mahsugoi.github.io/SoftGlow/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json" set:html={`
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "GlowHolder Wooden LED Lamp",
+      "description": "Lampu LED dengan rangka kayu mahoni solid. Cahaya warm white 2700K, touch control 3 level kecerahan.",
+      "image": [
+        "https://mahsugoi.github.io/SoftGlow/product-ambient.webp",
+        "https://mahsugoi.github.io/SoftGlow/product-room.webp",
+        "https://mahsugoi.github.io/SoftGlow/product-lifestyle.webp"
+      ],
+      "brand": {
+        "@type": "Brand",
+        "name": "GlowHolder"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "price": "0",
+        "priceCurrency": "IDR",
+        "url": "https://mahsugoi.github.io/SoftGlow/"
+      }
+    }
+  `} />
+</head>
+<body>
+  <slot />
+  <script is:inline src="/scripts.js"></script>
+</body>
+</html>
