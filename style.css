@@ -26,8 +26,7 @@ header{
   transition:background .3s,box-shadow .3s;
 }
 header.up{background:rgba(250,245,236,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(26,18,8,.08)}
-.logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;letter-spacing:.04em;display:flex;align-items:center;gap:.5rem}
-.logo-dot{width:8px;height:8px;background:var(--caramel);border-radius:50%}
+.logo{display:flex;align-items:center;height:36px;width:auto}
 nav{display:flex;align-items:center;gap:1.8rem}
 nav a{font-size:.8rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink2);transition:color .2s}
 nav a:hover{color:var(--ink)}
@@ -148,7 +147,7 @@ h2 em{font-style:italic;color:var(--bark)}
 .faq-item.open .faq-a{max-height:150px;padding-bottom:1.1rem}
 
 footer{background:var(--ink);padding:3rem 2rem 2rem;text-align:center}
-.f-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--white);margin-bottom:.6rem}
+.f-logo{display:block;margin:0 auto .6rem;width:48px;height:48px}
 .f-sub{font-size:.8rem;color:rgba(250,245,236,.35);margin-bottom:1.5rem;font-weight:300}
 .f-links{display:flex;justify-content:center;gap:1.5rem;margin-bottom:2rem;flex-wrap:wrap}
 .f-links a{font-size:.78rem;color:rgba(250,245,236,.4);transition:color .2s}
