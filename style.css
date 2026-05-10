@@ -133,12 +133,10 @@ footer{background:var(--ink);padding:3rem 2rem 2rem;text-align:center}
 .f-links a:hover{color:var(--caramel)}
 .f-copy{font-size:.72rem;color:rgba(250,245,236,.2)}
 
-.wa-float{position:fixed;bottom:1.8rem;right:1.8rem;z-index:200}
-.wa-float a{width:54px;height:54px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(37,211,102,.35);transition:transform .2s;position:relative}
-.wa-float a:hover{transform:scale(1.1)}
-.wa-float a svg{width:24px;height:24px}
-.wa-ping{position:absolute;inset:0;border-radius:50%;background:rgba(37,211,102,.3);animation:ping 2s ease-out infinite}
-@keyframes ping{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.75);opacity:0}}
+.ig-float{position:fixed;bottom:1.8rem;right:1.8rem;z-index:200}
+.ig-float a{width:54px;height:54px;background:transparent;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.ig-float a:hover{transform:scale(1.1)}
+.ig-float a svg{width:24px;height:24px;color:var(--caramel)}
 
 @media(max-width:860px){
   nav>ul,nav>.nav-cta{display:none}
