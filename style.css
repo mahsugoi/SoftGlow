@@ -61,7 +61,7 @@ h1 strong{font-weight:700;display:block}
 .btn-wa svg{width:15px;height:15px;flex-shrink:0}
 
 .hero-r{
-  background:url('background.webp') center/cover no-repeat;
+  background:url('background.webp') 55% center/cover no-repeat;
   position:relative;overflow:hidden;z-index:1;
 }
 .rating-chip{position:absolute;top:2rem;left:2rem;background:var(--ink);color:var(--white);padding:.6rem 1rem;border-radius:8px;font-size:.75rem;z-index:2}
