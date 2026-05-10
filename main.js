@@ -4,8 +4,9 @@ window.addEventListener('scroll', () => hdr.classList.toggle('up', scrollY > 20)
 document.getElementById('ham').onclick = () => document.getElementById('mob').classList.add('show');
 document.getElementById('mob-x').onclick = closeMob;
 function closeMob() { document.getElementById('mob').classList.remove('show'); }
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeMob(); closeAI(); } });
 
-const words = ['Handcrafted','Warm Light','Kayu Solid','LED 2700K','Touch Control','Eco-Friendly','Made with Love','Garansi 1 Tahun'];
+const words = ['Handcrafted','Warm Light','PVC & Wood Sheet','LED 2700K','Baterai','Natural Look','Eco-Friendly','Garansi 3 Bulan'];
 const t = document.getElementById('mtrack');
 const all = [...words,...words,...words,...words];
 t.innerHTML = all.map(w => `<span class="mitem"><span class="mdot"></span>${w}</span>`).join('');
@@ -45,6 +46,7 @@ function closeAI() {
 aiInput.addEventListener('keydown', e => {
   if (e.key === 'Enter') sendAI();
 });
+document.getElementById('aiSend').addEventListener('click', sendAI);
 
 async function sendAI() {
   const msg = aiInput.value.trim();
