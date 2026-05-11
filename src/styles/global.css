@@ -37,9 +37,11 @@ header.up{background:rgba(250,245,236,.95);backdrop-filter:blur(12px);box-shadow
 .brand-product{font-family:'Great Vibes',cursive;font-size:clamp(1.3rem,3vw,1.8rem);color:var(--caramel)}
 nav{display:flex;align-items:center;gap:1rem}
 nav ul{display:flex;align-items:center;gap:.5rem}
-nav a{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--caramel);padding:.35rem 1rem;border:1px solid var(--bark);border-radius:50px;transition:color .2s,background .2s,transform .2s}
+nav a{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--caramel);  padding:.35rem 1rem;border:1px solid var(--bark);border-radius:50px;transition:color .2s,background .2s,transform .2s}
 nav a:hover{color:var(--white);background:var(--bark)}
 nav a:active{transform:scale(.95)}
+.nav-ai{display:inline-flex;align-items:center;gap:.4rem}
+.nav-ai svg{flex-shrink:0}
 .nav-cta{background:var(--green);color:#fff;padding:.45rem 1.1rem;border-radius:50px;border:1px solid var(--green);font-size:.78rem;font-weight:500;transition:opacity .2s,background .2s,transform .2s}
 .nav-cta:hover{opacity:1;background:#1ebe5a}
 .nav-cta:active{transform:scale(.95)}
@@ -214,10 +216,9 @@ footer{background:var(--ink);padding:3rem 2rem 2rem;text-align:center}
   .mob{gap:.8rem;flex-direction:column}
   .mob a{font-size:1.3rem}
   .ai-panel{left:.5rem;right:.5rem;bottom:.5rem;width:auto;height:450px}
-  .ai-float{bottom:5rem;right:.8rem}
   .ig-float{bottom:.8rem;right:.8rem}
-  .ig-float a,.ai-float button{width:48px;height:48px}
-  .ig-float a svg,.ai-float button svg{width:20px;height:20px}
+  .ig-float a{width:48px;height:48px}
+  .ig-float a svg{width:20px;height:20px}
   .step{width:100%;max-width:180px}
   .steps{flex-direction:column;align-items:center}
   .f-links a{font-size:.75rem}
@@ -225,16 +226,6 @@ footer{background:var(--ink);padding:3rem 2rem 2rem;text-align:center}
 }
 
 /* ── AI ASSISTANT ── */
-.ai-float{
-  position:fixed;bottom:5.5rem;right:1.8rem;z-index:200
-}
-.ai-float button{
-  width:54px;height:54px;background:transparent;border:none;
-  display:flex;align-items:center;justify-content:center;
-  cursor:pointer;transition:transform .2s;color:var(--caramel)
-}
-.ai-float button:hover{transform:scale(1.1)}
-
 .ai-overlay{
   position:fixed;inset:0;z-index:299;background:rgba(26,18,8,.25);
   opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s

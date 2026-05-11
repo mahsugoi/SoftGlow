@@ -16,6 +16,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#product">Produk</a></li>
+        <li><a href="#" onclick="toggleAI();return false" class="nav-ai">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/></svg>
+          Tanya
+        </a></li>
       </ul>
       <a href="https://wa.me/6281248924820?text=Halo%20GlowHolder%2C%20saya%20tertarik%20dengan%20produk%20lampunya!%20Boleh%20minta%20info%20lebih%20lanjut%3F" target="_blank" class="nav-cta">Order WA</a>
     </nav>
@@ -26,6 +30,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <button class="mob-x" id="mob-x" aria-label="Tutup menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     <a href="#about" onclick="closeMob()">About</a>
     <a href="#product" onclick="closeMob()">Produk</a>
+    <a href="#" onclick="toggleAI();closeMob();return false">Tanya AI</a>
     <a href="https://wa.me/6281248924820?text=Halo%20GlowHolder%2C%20saya%20tertarik%20dengan%20produk%20lampunya!%20Boleh%20minta%20info%20lebih%20lanjut%3F" target="_blank" onclick="closeMob()" class="nav-cta" style="font-size:.95rem">Order WA</a>
   </div>
 
@@ -166,14 +171,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
       </svg>
     </a>
-  </div>
-
-  <div class="ai-float" id="aiFab">
-    <button onclick="toggleAI()" aria-label="Tanya AI">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/>
-      </svg>
-    </button>
   </div>
 
   <div class="ai-overlay" id="aiOverlay" onclick="closeAI()"></div>
