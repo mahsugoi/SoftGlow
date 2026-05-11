@@ -1,7 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "bun run build",
-  "outputDirectory": "dist",
+  "buildCommand": "npm run build",
   "functions": {
     "api/chat.js": {
       "memory": 256,
