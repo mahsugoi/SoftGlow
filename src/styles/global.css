@@ -53,7 +53,7 @@ nav a:active{transform:scale(.95)}
 .mob a{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,4vw,2rem);color:var(--caramel);letter-spacing:.04em;transition:color .2s;padding:.6rem}
 .mob a:hover{color:var(--bark)}
 .mob a:active{color:var(--bark)}
-.mob-x{position:absolute;top:2.5rem;right:1.2rem;background:none;border:none;cursor:pointer;padding:8px}
+.mob-x{position:absolute;top:1.5rem;right:1.2rem;background:none;border:none;cursor:pointer;padding:8px}
 
 #hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative}
 .hero-l{display:flex;flex-direction:column;justify-content:center;padding:clamp(6rem,10vw,8rem) clamp(1.5rem,4vw,3rem) clamp(2rem,4vw,4rem) clamp(1.5rem,4vw,2.5rem);position:relative;z-index:1;background:var(--white);border-radius:0 clamp(80px,15vw,200px) clamp(80px,15vw,200px) 0;overflow:hidden}
