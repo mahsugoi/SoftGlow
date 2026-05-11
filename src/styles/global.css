@@ -213,8 +213,8 @@ footer{background:var(--ink);padding:3rem 2rem 2rem;text-align:center}
   .features{grid-template-columns:1fr}
   .mob{gap:.8rem;flex-direction:column}
   .mob a{font-size:1.3rem}
-  .ai-panel{left:1.8rem;right:.5rem;bottom:.5rem;width:auto;height:450px}
-  .ai-float{bottom:.8rem;left:.8rem}
+  .ai-panel{left:.5rem;right:.5rem;bottom:.5rem;width:auto;height:450px}
+  .ai-float{bottom:5rem;right:.8rem}
   .ig-float{bottom:.8rem;right:.8rem}
   .ig-float a,.ai-float button{width:48px;height:48px}
   .ig-float a svg,.ai-float button svg{width:20px;height:20px}
@@ -226,7 +226,7 @@ footer{background:var(--ink);padding:3rem 2rem 2rem;text-align:center}
 
 /* ── AI ASSISTANT ── */
 .ai-float{
-  position:fixed;bottom:1.8rem;left:1.8rem;z-index:200
+  position:fixed;bottom:5.5rem;right:1.8rem;z-index:200
 }
 .ai-float button{
   width:54px;height:54px;background:transparent;border:none;
@@ -242,14 +242,14 @@ footer{background:var(--ink);padding:3rem 2rem 2rem;text-align:center}
 .ai-overlay.show{opacity:1;visibility:visible}
 
 .ai-panel{
-  position:fixed;bottom:1.8rem;left:5.5rem;z-index:300;
+  position:fixed;bottom:1.8rem;right:5.5rem;z-index:300;
   width:380px;max-width:calc(100vw - 2rem);height:520px;max-height:calc(100vh - 4rem);
   background:var(--cream);border-radius:16px;
   box-shadow:0 16px 48px rgba(26,18,8,.18);
   display:flex;flex-direction:column;
   opacity:0;visibility:hidden;transform:translateY(12px) scale(.97);
   transition:opacity .3s,visibility .3s,transform .3s;
-  transform-origin:bottom left
+  transform-origin:bottom right
 }
 .ai-panel.show{opacity:1;visibility:visible;transform:none}
 
