@@ -16,10 +16,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#product">Produk</a></li>
-        <li><a href="#" onclick="toggleAI();return false" class="nav-ai">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/></svg>
-          Tanya
-        </a></li>
       </ul>
       <a href="https://wa.me/6281248924820?text=Halo%20GlowHolder%2C%20saya%20tertarik%20dengan%20produk%20lampunya!%20Boleh%20minta%20info%20lebih%20lanjut%3F" target="_blank" class="nav-cta">Order WA</a>
     </nav>
@@ -30,7 +26,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <button class="mob-x" id="mob-x" aria-label="Tutup menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     <a href="#about" onclick="closeMob()">About</a>
     <a href="#product" onclick="closeMob()">Produk</a>
-    <a href="#" onclick="toggleAI();closeMob();return false">Tanya AI</a>
     <a href="https://wa.me/6281248924820?text=Halo%20GlowHolder%2C%20saya%20tertarik%20dengan%20produk%20lampunya!%20Boleh%20minta%20info%20lebih%20lanjut%3F" target="_blank" onclick="closeMob()" class="nav-cta" style="font-size:.95rem">Order WA</a>
   </div>
 
@@ -173,37 +168,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </a>
   </div>
 
-  <div class="ai-overlay" id="aiOverlay" onclick="closeAI()"></div>
-
-  <div class="ai-panel" id="aiPanel">
-    <div class="ai-header">
-      <div class="ai-header-left">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
-          <path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/>
-        </svg>
-        <span>GlowBot</span>
-      </div>
-      <button class="ai-close" onclick="closeAI()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-    </div>
-    <div class="ai-body" id="aiBody">
-      <div class="ai-msg ai-bot">
-        <div class="ai-msg-content">
-          Halo! Saya asisten GlowHolder. Ada yang bisa saya bantu tentang produk lampu organizer multifungsi kami?
-        </div>
-      </div>
-      <div class="ai-typing" id="aiTyping" style="display:none">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-    <div class="ai-footer">
-      <input type="text" id="aiInput" placeholder="Tanya tentang GlowHolder..." autocomplete="off">
-      <button id="aiSend" onclick="sendAI()" aria-label="Kirim">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
-          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <script src="/src/scripts/main.js"></script>
+  
 </BaseLayout>
